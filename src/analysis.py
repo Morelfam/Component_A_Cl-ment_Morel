@@ -8,9 +8,9 @@ import matplotlib
 matplotlib.use("Agg")  # non-interactive backend: save to file, don't open a window
 import matplotlib.pyplot as plt
 
-# Paths are relative to the repo root (where you run the command from).
-DATA = Path("data/prices.csv")
-OUT = Path("outputs/plot.png")
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+DATA = PROJECT_ROOT / "data/prices.csv"
+OUT = PROJECT_ROOT / "outputs/plot.png"
 WINDOW = 20  # trading days
 
 
