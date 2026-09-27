@@ -19,11 +19,13 @@ python -m pip install -r requirements.txt
 
 ## Run
 
-Run the analysis from the project root:
+Run the analysis with the Bash script:
 
 ```bash
-python src/analysis.py
+./scripts/run_analysis.sh
 ```
+
+The script uses `python3` from your `PATH` by default. Set `PYTHON` to choose a different interpreter, or activate your virtual environment before running it. It can be run from any working directory.
 
 The chart is saved to `outputs/plot.png`. The output directory is created automatically if it does not exist.
 
@@ -47,6 +49,7 @@ Change the `WINDOW` value near the top of `src/analysis.py` to use a different m
 ```text
 data/prices.csv       Input price data
 outputs/plot.png      Generated chart
+scripts/run_analysis.sh  Bash runner for the analysis
 src/analysis.py       Analysis and plotting script
 requirements.txt      Python dependencies
 ```
