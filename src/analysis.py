@@ -37,6 +37,7 @@ def main() -> None:
     # 4. Save — make sure the outputs/ folder exists first.
     OUT.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(OUT, dpi=120)
+    plt.close(fig)
     print(f"Saved {OUT}  ({len(df)} rows, MA window = {WINDOW})")
 
 
